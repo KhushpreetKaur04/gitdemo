@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Your Electronics Shop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        nav a:hover {
+            background: #34495e;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .price {
+            color: #e74c3c;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: left;
+        }
+        table th {
+            background: #3498db;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .features {
+            background: #ecf0f1;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        .video-container {
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- BASIC HTML STRUCTURE: Header with Navigation -->
+    <header>
+        <div class="container">
+            <!-- HEADINGS: h1 for main title -->
+            <h1>🛒 TechStore</h1>
+            <!-- LISTS: Unordered list for navigation -->
+            <nav>
+                <ul>
+                    <!-- LINKS: Navigation links -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <h1>Welcome to TechStore</h1>
+        <!-- PARAGRAPHS: Description text -->
+        <p>Your one-stop shop for the latest electronics and gadgets</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </div>
+
+    <div class="container">
+        <!-- HEADINGS: h2 for section titles -->
+        <h2 id="products">Featured Products</h2>
+        
+        <!-- BLOCK ELEMENTS: div containers for products -->
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <!-- IMAGES: Product images with alt text -->
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Wireless Headphones">
+                <!-- HEADINGS: h3 for product names -->
+                <h3>Wireless Headphones</h3>
+                <p>Premium sound quality with noise cancellation</p>
+                <!-- LISTS: Unordered list for features -->
+                <ul style="text-align: left; margin: 1rem 0;">
+                    <li>40-hour battery life</li>
+                    <li>Bluetooth 5.0</li>
+                    <li>Foldable design</li>
+                </ul>
+                <!-- INLINE ELEMENTS: span for price -->
+                <span class="price">$99.99</span>
+                <br>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>Track your fitness and stay connected</p>
+                <ul style="text-align: left; margin: 1rem 0;">
+                    <li>Heart rate monitor</li>
+                    <li>GPS tracking</li>
+                    <li>Water resistant</li>
+                </ul>
+                <span class="price">$249.99</span>
+                <br>
+                <button class="btn">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400" alt="Laptop">
+                <h3>Gaming Laptop</h3>
+                <p>High performance for work and play</p>
+                <ul style="text-align: left; margin: 1rem 0;">
+                    <li>Intel i7 processor</li>
+                    <li>16GB RAM</li>
+                    <li>RTX 3060 GPU</li>
+                </ul>
+                <span class="price">$1,299.99</span>
+                <br>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- TABLES: Product comparison table -->
+        <h2>Product Comparison</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Warranty</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Wireless Headphones</td>
+                    <td>$99.99</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>2 years</td>
+                </tr>
+                <tr>
+                    <td>Smart Watch</td>
+                    <td>$249.99</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>1 year</td>
+                </tr>
+                <tr>
+                    <td>Gaming Laptop</td>
+                    <td>$1,299.99</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>3 years</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Shipping Information with Ordered List -->
+        <div class="features">
+            <h2>How to Order</h2>
+            <!-- LISTS: Ordered list for steps -->
+            <ol>
+                <li>Browse our product catalog</li>
+                <li>Add items to your cart</li>
+                <li>Proceed to checkout</li>
+                <li>Enter shipping information</li>
+                <li>Complete payment</li>
+                <li>Receive confirmation email</li>
+            </ol>
+        </div>
+
+        <!-- VIDEO: Product demonstration -->
+        <div class="video-container">
+            <h2>Product Demo Video</h2>
+            <video width="100%" controls poster="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800">
+                <source src="demo-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- IFRAME: Embedded content -->
+        <h2 id="contact">Visit Our Store</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.123!2d75.857!3d30.901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDU0JzAzLjYiTiA3NcKwNTEnMjUuMiJF!5e0!3m2!1sen!2sin!4v1234567890"></iframe>
+
+        <!-- About Section -->
+        <div id="about" class="features">
+            <h2>About TechStore</h2>
+            <p>TechStore has been serving tech enthusiasts since 2020. We pride ourselves on offering the latest electronics at competitive prices with excellent customer service.</p>
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li>Free shipping on orders over $50</li>
+                <li>30-day return policy</li>
+                <li>24/7 customer support</li>
+                <li>Secure payment processing</li>
+                <li>Authentic products with warranty</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h3>TechStore</h3>
+        <p>&copy; 2024 TechStore. All rights reserved.</p>
+        <!-- LISTS: Unordered list in footer -->
+        <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <p style="margin-top: 1rem;">
+            Follow us: 
+            <a href="#" style="color: white;">Facebook</a> | 
+            <a href="#" style="color: white;">Twitter</a> | 
+            <a href="#" style="color: white;">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>
